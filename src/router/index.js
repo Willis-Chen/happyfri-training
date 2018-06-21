@@ -10,8 +10,17 @@ export default new Router({
       path: '/',
       component: App,
       children:[{
-
-      }
+        path:"",
+        component: r => require.ensure([],()=> r(require('.../component/page/home'),'home'))
+      },
+        {
+          path:"/item",
+          component:r=>require.ensure([],()=>r(require('.../component/page/item'),'item'))
+        },
+        {
+          path:"/score",
+          component:r=>require.ensure([],()=>r(require('.../component/page/score'),'score'))
+        }
       ]
     }
   ]
