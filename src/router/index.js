@@ -11,15 +11,15 @@ export default new Router({
       component: App,
       children:[{
         path:"",
-        component: r => require.ensure([],()=> r(require('.../component/page/home'),'home'))
+        component: r => require.ensure([],()=> r(require('../component/page/home'),'home'))
       },
         {
           path:"/item",
-          component:r=>require.ensure([],()=>r(require('.../component/page/item'),'item'))
+          component:r=>require.ensure([],()=>r(require('../component/page/item'),'item'))
         },
         {
           path:"/score",
-          component:r=>require.ensure([],()=>r(require('.../component/page/score'),'score'))
+          component:r=>require.ensure([],()=>r(require('../component/page/score'),'score'))
         }
       ]
     }

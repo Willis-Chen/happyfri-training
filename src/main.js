@@ -3,7 +3,8 @@
 import Vue from 'vue'
 import router from './router'
 import store from './store/'
-
+import './config/rem'
+import '../static/css/common.less'
 
 /* eslint-disable no-new */
 new Vue({
